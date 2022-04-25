@@ -1,0 +1,114 @@
+
+@keyframes spin {
+    0% {transform: rotateY(0deg)} 
+    50% {transform: rotateY(90deg);
+    background-color: darkcyan;}          
+    100% {transform: rotateY(180deg)};
+        
+}
+
+body {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    }
+
+.grid-container {
+   
+    width: 40vw;
+    height:75vh;
+    margin: 5rem;
+    padding: 1rem;
+    background-color:aquamarine;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 2px;
+    border: 2px solid black;
+    
+}
+  
+/* .item-container {
+    width: 40vw;
+    height:75vh;
+    margin: 5rem;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 2px;
+} */
+    
+
+.grid-item {
+    width: auto;
+    height: auto;
+    border: 1px solid black;
+    background: darkcyan;
+    text-align: center;
+    transform: rotateY(0deg);    
+}
+
+.active {
+    animation:spin 0.5s;
+    animation-timing-function:ease-in-out;
+    animation-fill-mode:forwards;    
+}
+
+
+ .inner {
+    position:absolute;
+    grid-column: 1;
+    grid-row: 1;
+    width:100%;
+    height:100%; 
+    transform:rotateX(0deg);
+    background: linear-gradient(to bottom, #fbfbf8 0%, #f9dd0a 100%);
+    
+}
+
+
+
+
+.test {
+    transform:rotateY(0deg);
+    width:75px;
+    height:75px;
+    background: linear-gradient(to bottom, #fbfbf8 0%, #f9dd0a 100%);
+    overflow: hidden;
+}
+
+.inner-test {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    position: absolute;
+    transform: rotate(-18deg);
+    left: 0px;
+    top: -40px;
+}
+
+.test2 {
+    margin:10px;
+    transform:rotateY(0deg);
+    width:75px;
+    height:75px;
+    background-image:url(gold.png);
+    overflow: hidden;
+    /* background: linear-gradient(to bottom, #fbfbf8 0%, #f9dd0a 100%); */
+}
+
+.test3 {
+    margin:10px;
+    transform:rotateY(0deg);
+    width:75px;
+    height:75px;
+    background-image:url(goldfoil2.png);
+    overflow: hidden;
+}
+/* .test:hover {
+    animation: spin 1s;
+    transition: 1.5s ;
+} */
